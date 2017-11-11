@@ -1,0 +1,26 @@
+stages:
+  - build
+  - testing
+
+build:
+  stage: build
+  script:
+    - dotnet restore
+    - dotnet build -c Release HelloWorldDevops
+
+unit_tests:
+  stage: testing
+  when: manual
+  script:
+    - dotnet restore
+    - dotnet build -c Release HelloWorldDevops
+    - dotnet build -c Release XUnitTestProject
+    - dotnet test -c Release XUnitTestProject/XUnitTestProject.csproj
+
+selenium_tests:
+  stage: testing
+  script:
+    - dotnet restore
+    - dotnet build -c Release HelloWorldDevops
+    - dotnet build -c Release HelloWorldTest
+    - dotnet test -c Release HelloWorldTest/HelloWorldTest.csproj
