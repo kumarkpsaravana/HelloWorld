@@ -1,0 +1,31 @@
+image : microsoft/dotnet:latest
+
+stages:
+  - build
+  - testing
+  - publish
+
+build:
+  stage: build
+  script:
+    - dotnet restore
+    - dotnet build -c Release HelloWorldDevops
+    
+publish:
+  stage: publish
+  script:
+    - dotnet restore
+    - cd HelloWorldDevops
+    - dotnet publish -c Release
+  artifacts:
+    paths:
+      - '/builds/kumarkpsaravana/HelloWorld/HelloWorldDevops/bin/Release/netcoreapp1.1/publish/'
+
+unit_tests:
+  stage: testing
+  image : microsoft/dotnet:1.1.2-sdk
+  script:
+  
+    - dotnet restore
+    - dotnet build -c Release XUnitTestProject
+    - dotnet test -c Release XUnitTestProject/XUnitTestProject.csproj
