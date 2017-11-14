@@ -7,5 +7,6 @@ install:
 - dotnet restore
 
 script:
-- dotnet build
-- dotnet test HelloWorldTest/HelloWorldTest.csproj
+- dotnet build HelloWorldDevops/HelloWorldDevops.csproj
+- dotnet build XUnitTestProject/XUnitTestProject.csproj
+- dotnet test XUnitTestProject/XUnitTestProject.csproj
