@@ -38,7 +38,7 @@ namespace XUnitTestProject
         }
 
         public static TheoryData<bool> DataForTest1 = new TheoryData<bool> {
-    { true }, { false },{true},{false } };
+    { true }, { true },{true},{true } };
 
         [Theory(DisplayName = "Test 1"), MemberData(nameof(DataForTest1))]
         public void Test1(bool valB)
@@ -47,7 +47,7 @@ namespace XUnitTestProject
         }
 
         public static TheoryData<string> DataForTest2 = new TheoryData<string> {
-    { "g2" }, { "g2T" },{"cg"},{"common" } };
+    { "cg" }, { "cg" },{"cg"},{"cg" } };
 
         [Theory(DisplayName = "Test 2 "+ (nameof(DataForTest2))), MemberData(nameof(DataForTest2))]
         public void Test2(string valB)
