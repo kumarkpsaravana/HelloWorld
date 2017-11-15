@@ -4,14 +4,9 @@ mono: none
 dotnet: 1.0.4
 
 install:
-- curl -L -o nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 - dotnet restore
-- mono nuget.exe restore
-- mono nuget.exe install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 
 script:
 - dotnet build HelloWorldDevops/HelloWorldDevops.csproj
 - dotnet build XUnitTestProject/XUnitTestProject.csproj
 - dotnet test XUnitTestProject/XUnitTestProject.csproj
-- xbuild /t:Build /p:Configuration="Release" HelloWorldTest/HelloWorldTest.csproj
-- mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./HelloWorldTest/bin/Release/HelloWorldTest.dll /noresult
