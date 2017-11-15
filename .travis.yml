@@ -1,13 +1,13 @@
 language: csharp
 dist: trusty
-mono: none
+mono: 4.4.0.182
 dotnet: 1.0.4
 
 install:
 - curl -L -o nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 - dotnet restore
-- nuget restore
-- nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+- mono nuget.exe restore
+- mono nuget.exe install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 
 script:
 - dotnet build HelloWorldDevops/HelloWorldDevops.csproj
