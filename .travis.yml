@@ -1,6 +1,6 @@
 language: csharp
 dist: trusty
-mono: 4.4.0.182
+mono: none
 dotnet: 1.0.4
 
 install:
