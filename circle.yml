@@ -13,6 +13,3 @@ jobs:
       - run: dotnet build HelloWorldDevops/HelloWorldDevops.csproj
       - run: dotnet build XUnitTestProject/XUnitTestProject.csproj
       - run: dotnet test XUnitTestProject/XUnitTestProject.csproj
-  deployment:   
-    heroku:
-      appname: my-frist-app-hw
