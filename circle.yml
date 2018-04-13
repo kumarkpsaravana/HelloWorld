@@ -14,7 +14,6 @@ jobs:
       - run: dotnet build XUnitTestProject/XUnitTestProject.csproj
       - run: dotnet test XUnitTestProject/XUnitTestProject.csproj
   deployment:
-  staging:
-    branch: master
+   branch: master
     heroku:
       appname: my-frist-app-hw
