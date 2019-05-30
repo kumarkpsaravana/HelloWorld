@@ -16,7 +16,7 @@ namespace HelloWorldDevops.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-			ViewData["Message"] = "Your application description page.";
+			ViewData["Message"] = "Your applicat ion description page.";
 			ViewData["Message"] = "Your applicatio n description page.";
 			ViewData["Message"] = "Your application description page.";
 			ViewData["Message"] = "Your application descript ion page.";
