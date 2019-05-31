@@ -19,7 +19,7 @@ namespace HelloWorldDevops.Controllers
 			ViewData["Message"] = "Your applicat ion description page.";
 			ViewData["Message"] = "Your applicatio n description page.";
 			ViewData["Message"] = "Your applicatio n description page.";
-			ViewData["Message"] = "Your application descript ion page.";
+			ViewData["Message"] = "Your applicatgion descript ion page.";
 
             return View();
         }
