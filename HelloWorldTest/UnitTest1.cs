@@ -26,6 +26,11 @@ namespace HelloWorldTest
         public void TestMethod4()
         {
         }
+        
+        [TestMethod]
+        public void TestMethod6()
+        {
+        }
 
         [TestMethod]
         public void TestMethod5()
